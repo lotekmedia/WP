@@ -13,10 +13,10 @@
         </p>  
         <p>
         <p>
-          <?php echo _e('Custom Login Background','ltm_customlogin'); ?>: <input name="ltm_login_settings[login_background_color]" id="login_background_color" type="text" value="<?php if ( isset( $ltm_login_settings['login_background_color'] ) ) echo $ltm_login_settings['login_background_color']; ?>" />
+          <?php _e('Custom Login Background','ltm_customlogin'); ?>: <input name="ltm_login_settings[login_background_color]" id="login_background_color" type="text" value="<?php if ( isset( $ltm_login_settings['login_background_color'] ) ) echo $ltm_login_settings['login_background_color']; ?>" />
         </p>
         <p>
-          <?php echo _e('Use link shadow on login page?','ltm_customlogin'); ?>: 
+          <?php _e('Use link shadow on login page?','ltm_customlogin'); ?>: 
           <input name="ltm_login_settings[login_link_shadow]" id="login_link_shadow" type="checkbox" <?php if ( isset( $ltm_login_settings['login_link_shadow'] ) ) echo 'checked=checked' ?>/>
         </p>
         <hr />  
