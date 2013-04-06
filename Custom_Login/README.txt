@@ -1,39 +1,33 @@
 === Plugin Name ===
 Contributors: lotekmedia
-Tags: test, custom login
-Requires at least: 3.3.1
+Tags: custom login
+Requires at least: 3.5.1
 Tested up to: 3.5.1
 Stable tag: trunk
 
-This is just my first attempt at writing a plugin.  Do not use this as a template.
+This is a plug-in to do some basic customization to the login page
 
 == Description ==
 
-As I said, I'm just writing my first plugin and want to see the process for releasing it.
-Do NOT use this as a template.  Feel free to update the code for your local site and update your login page.
+This is used to change the header image, background color, and header link on the login page.
+Simple customization for the login page to make it more personalized.
 
-You will see two functions:
-ltm_custom_login_url and ltm_custom_header_title
+Features: Uses new Color Picker, is localizable, uses media picker for images.
 
-The ltm_custom_login_url is a link in the header image on the login page.
-The ltm_custom_header_title updates the image to use the wheel if you are using the twenty-eleven theme.
+Note: click on "Insert Into Post" to select that image for your header.
 
 == Installation ==
 
-1. Upload `test_custom_login.php` to the `/wp-content/plugins/` directory
+1. From Plugin Upload 'ltm_custom_login.zip'
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Frequently Asked Questions ==
 
-= Why does this have everything hard-coded? =
+= What is link shadow for? =
 
-Because I'm just trying to write a plug-in and see how publishing it works.
-
-= Can I modify this for my site? =
-
-Of course!  I'm surprised you are even reading this far into my test documentation
+Link shadow is the shadow around the links on the login page at the bottom.  It makes it hard to read depending on the background color you have selected, so I added a feature to turn it off if you need it.
 
 == Changelog ==
 
-= 0.0.1a =
-* My initial plug-in release.
+= 1.0.0 =
+* My initial release of a custom login plugin
