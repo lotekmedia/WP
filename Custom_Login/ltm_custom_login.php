@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: LotekMedia Custom Login Plugin
-Plugin URI: http://github.com/lotekmedia/wp/ltm_custom_login
+Plugin URI: https://github.com/lotekmedia/WP/tree/master/Custom_Login
 Description: This is just testing the plugin concept and publishing. This is my first attempt
-Version: 0.0.1A
+Version: 1.0.0
 Author: John Mann
 Author URI: http://lotekmedia.com
 Author Email: john@lotekmedia.com
@@ -27,10 +27,13 @@ License:
 */
 $ltm_login_settings = get_option('ltm_login_settings');
 
+//Returns the login url from the settings
 function ltm_custom_login_url(){
   global $ltm_login_settings;
   return $ltm_login_settings['login_url'];
-} 
+}
+
+//Sets the header image on the page and adds custom CSS based on settings 
 function ltm_custom_header_title(){
   global $ltm_login_settings;
   echo '<style type="text/css">                                                                   
@@ -55,15 +58,18 @@ function ltm_custom_header_title(){
   echo '</style>';
 }
 
+//Adds the admin settings page
 function ltm_add_admin(){
   add_options_page( 'LTM Custom Login', 'LTM Login', 'administrator', '__ltm_login_admin_page__', 'ltm_custom_login_appearance');
 }
 
+//Registers the options and loads the text domain for localization
 function ltm_register_settings(){
   register_setting( 'ltm_custom_login_group', 'ltm_login_settings');
   ltm_plugin_textdomain();
 }
 
+//Enqueues scripts for the plugin admin page (color picker and media uploader)
 function ltm_admin_enqueue_scripts(){
   wp_enqueue_script('media-upload');
   wp_enqueue_script('thickbox');
@@ -73,17 +79,19 @@ function ltm_admin_enqueue_scripts(){
 }
 
 
+//Loads the admin page
 function ltm_custom_login_appearance(){
   include('ltm_login_admin_page.php');
 }
 
+//adds all needed actions and filters
 add_action( 'admin_enqueue_scripts', 'ltm_admin_enqueue_scripts' );
 add_action( 'login_head','ltm_custom_header_title');
 add_action( 'admin_init','ltm_register_settings');
 add_action( 'admin_menu', 'ltm_add_admin');
-
 add_filter( 'login_headerurl', 'ltm_custom_login_url' );
 
+//Loads the localized text
 function ltm_plugin_textdomain() {
   load_plugin_textdomain( 'ltm_customlogin', false, '/ltm_customlogin/languages/' );
 }
