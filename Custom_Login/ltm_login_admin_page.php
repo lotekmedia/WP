@@ -16,6 +16,12 @@
           <?php _e('Custom Login Background','ltm_customlogin'); ?>: <input name="ltm_login_settings[login_background_color]" id="login_background_color" type="text" value="<?php if ( isset( $ltm_login_settings['login_background_color'] ) ) echo $ltm_login_settings['login_background_color']; ?>" />
         </p>
         <p>
+          <?php _e('Custom Login Link Color','ltm_customlogin'); ?>: <input name="ltm_login_settings[login_link_color]" id="login_link_color" type="text" value="<?php if ( isset( $ltm_login_settings['login_link_color'] ) ) echo $ltm_login_settings['login_link_color']; ?>" />
+        </p>
+        <p>
+          <?php _e('Custom Login Link Hover Color','ltm_customlogin'); ?>: <input name="ltm_login_settings[login_link_hover_color]" id="login_link_hover_color" type="text" value="<?php if ( isset( $ltm_login_settings['login_link_hover_color'] ) ) echo $ltm_login_settings['login_link_hover_color']; ?>" />
+        </p>
+        <p>
           <?php _e('Use link shadow on login page?','ltm_customlogin'); ?>: 
           <input name="ltm_login_settings[login_link_shadow]" id="login_link_shadow" type="checkbox" <?php if ( isset( $ltm_login_settings['login_link_shadow'] ) ) echo 'checked=checked' ?>/>
         </p>

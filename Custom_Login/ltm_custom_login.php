@@ -1,15 +1,15 @@
 <?php
 /*
-Plugin Name: LotekMedia Custom Login Plugin
+Plugin Name: LotekMedia Custom Login
 Plugin URI: https://github.com/lotekmedia/WP/tree/master/Custom_Login
-Description: This is just testing the plugin concept and publishing. This is my first attempt
-Version: 1.0.0
+Description: This is a plugin to customize your login page
+Version: 1.3.0
 Author: John Mann
 Author URI: http://lotekmedia.com
 Author Email: john@lotekmedia.com
 License:
 
-  Copyright 2013 LoTekMedia (john@lotekmedia.com)
+  Copyright 2014 LoTekMedia (john@lotekmedia.com)
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License, version 2, as 
@@ -42,19 +42,27 @@ function ltm_custom_header_title(){
          background-size: 100%;
          height: 150px;
          width: 310px;
-         margin-left: 8px;
         }
         body.login{
           background-color: '.$ltm_login_settings["login_background_color"].' !important;
         }
-        .login #nav, .login #backtoblog {';
-    if (isset( $ltm_login_settings['login_link_shadow'] ) ) {
-      echo 'text-shadow: #fff 0 1px 0
-          }';
+        .login #nav a, .login #backtoblog a{';
+        if (isset( $ltm_login_settings['login_link_shadow'] ) ) {
+            echo 'text-shadow: #fff 0 1px 0';
         }
-    else { 
-      echo  'text-shadow:none};';
+        else { 
+            echo  'text-shadow:none;';
         }
+        if (isset( $ltm_login_settings['login_link_color'] ) ) {
+            echo 'color: '.$ltm_login_settings["login_link_color"].' !important;';
+        };
+        echo '}
+        .login #nav a:hover, .login #backtoblog a:hover{';
+        if (isset( $ltm_login_settings['login_link_hover_color'] ) ) {
+            echo 'color: '.$ltm_login_settings["login_link_hover_color"].' !important;';
+        };
+        echo '}';
+
   echo '</style>';
 }
 
@@ -71,13 +79,15 @@ function ltm_register_settings(){
 
 //Enqueues scripts for the plugin admin page (color picker and media uploader)
 function ltm_admin_enqueue_scripts(){
+ if (isset($_GET['page']) && $_GET['page'] == '__ltm_login_admin_page__') {
+  wp_enqueue_media();
   wp_enqueue_script('media-upload');
   wp_enqueue_script('thickbox');
   wp_enqueue_style('thickbox');
   wp_enqueue_style( 'wp-color-picker' );
   wp_enqueue_script( 'ltm-script-handle', plugins_url('scripts/ltm_custom_login.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
+ }
 }
-
 
 //Loads the admin page
 function ltm_custom_login_appearance(){
