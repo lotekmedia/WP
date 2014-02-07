@@ -6,8 +6,9 @@
       function pickColor(color) {
           $('#link-color').val(color);
       }
-      function toggle_text() {
-          var link_color = $('#login_background_color');
+
+      function setColor(event) {
+          var link_color = event.itemToColor; //$('#login_background_color');
           if ('' === link_color.val().replace('#', '')) {
               link_color.val(default_color);
               pickColor(default_color);
@@ -16,19 +17,28 @@
           }
       }
 
-      $(document).ready(function () {
-          var link_color = $('#login_background_color');
-          link_color.wpColorPicker({
+      function setColorPicker(itemToColor) {
+          itemToColor.wpColorPicker({
               change: function (event, ui) {
-                  pickColor(link_color.wpColorPicker('color'));
+                  pickColor(itemToColor.wpColorPicker('color'));
               },
               clear: function () {
                   pickColor('');
               }
           });
-          $('#link-color').click(toggle_text);
+          $('#link-color').click({ item: itemToColor }, setColor);
+      }
 
-          toggle_text();
+      $(document).ready(function () {
+          
+          var background_color = $('#login_background_color');
+          setColorPicker(background_color);
+
+          var link_color = $('#login_link_color');
+          setColorPicker(link_color);
+
+          var link_hover_color = $('#login_link_hover_color');
+          setColorPicker(link_hover_color);
 
           window.send_to_editor = function (html) {
               var imgurl = jQuery('img', html).attr('src');
