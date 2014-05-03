@@ -1,0 +1,154 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: LTM contact form\n"
+"POT-Creation-Date: 2014-05-02 22:01-0500\n"
+"PO-Revision-Date: 2014-05-02 22:02-0500\n"
+"Last-Translator: John Mann <me@johnmann.org>\n"
+"Language-Team: johnmann.org <www.johnmann.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../ltm-popup-form.php:47
+msgid "Your Name"
+msgstr ""
+
+#: ../ltm-popup-form.php:51
+msgid "Your Email"
+msgstr ""
+
+#: ../ltm-popup-save.php:41
+msgid "Message sent successfully."
+msgstr ""
+
+#: ../ltm-popup-save.php:46
+msgid "Please enter your name and email."
+msgstr ""
+
+#: ../ltm-popup-setting.php:6
+msgid "LotekMedia Popup Form"
+msgstr ""
+
+#: ../ltm-popup-setting.php:7
+msgid "Popup email setting"
+msgstr ""
+
+#: ../ltm-popup-setting.php:10
+msgid "Email address"
+msgstr ""
+
+#: ../ltm-popup-setting.php:12
+msgid "Please enter admin email address to receive mails."
+msgstr ""
+
+#: ../ltm-popup-setting.php:14
+msgid "Email subject"
+msgstr ""
+
+#: ../ltm-popup-setting.php:16
+msgid "Please enter mail subject."
+msgstr ""
+
+#: ../ltm-popup-setting.php:18
+msgid "Link Text"
+msgstr ""
+
+#: ../ltm-popup-setting.php:20
+msgid ""
+"This box is to add the contact us Text, Entered value will display in the "
+"front end."
+msgstr ""
+
+#: ../ltm-popup-setting.php:23
+msgid "Popup widget setting"
+msgstr ""
+
+#: ../ltm-popup-setting.php:25
+msgid "Popup Background Color"
+msgstr ""
+
+#: ../ltm-popup-setting.php:28
+msgid "Popup Background Hover Color"
+msgstr ""
+
+#: ../ltm-popup-setting.php:31
+msgid "Popup Text Color"
+msgstr ""
+
+#: ../ltm-popup-setting.php:34
+msgid "Popup title"
+msgstr ""
+
+#: ../ltm-popup-setting.php:36
+msgid "Please enter popup box title."
+msgstr ""
+
+#: ../ltm-popup-setting.php:38
+msgid "Popup Message"
+msgstr ""
+
+#: ../ltm-popup-setting.php:40
+msgid "Please enter message for your box."
+msgstr ""
+
+#: ../ltm-popup-setting.php:42
+msgid "Popup Button Text"
+msgstr ""
+
+#: ../ltm-popup-setting.php:44
+msgid "Please enter text for submit button."
+msgstr ""
+
+#: ../ltm-popup-setting.php:46
+msgid "Popup Button Color"
+msgstr ""
+
+#: ../ltm-popup-setting.php:49
+msgid "On home page display"
+msgstr ""
+
+#: ../ltm-popup-setting.php:54
+msgid "Select YES if you need to display on home page."
+msgstr ""
+
+#: ../ltm-popup-setting.php:56
+msgid "On posts display"
+msgstr ""
+
+#: ../ltm-popup-setting.php:61
+msgid "Select YES if you need to display on posts."
+msgstr ""
+
+#: ../ltm-popup-setting.php:63
+msgid "On pages display"
+msgstr ""
+
+#: ../ltm-popup-setting.php:68
+msgid "Select YES if you need to display on wordpress pages."
+msgstr ""
+
+#: ../ltm-popup-setting.php:70
+msgid "On search page display"
+msgstr ""
+
+#: ../ltm-popup-setting.php:75
+msgid "Select YES if you need to display on search pages."
+msgstr ""
+
+#: ../ltm-popup-setting.php:77
+msgid "On archive page display"
+msgstr ""
+
+#: ../ltm-popup-setting.php:82
+msgid "Select YES if you need to display on archive pages."
+msgstr ""
+
+#: ../ltm-popup-setting.php:85
+msgid "Update All Details"
+msgstr ""

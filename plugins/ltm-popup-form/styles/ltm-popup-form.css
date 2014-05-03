@@ -1,0 +1,164 @@
+/**
+ *     LTM contact form
+ *     http://johnmann.org
+ * 
+ *     This program is free software: you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation, either version 3 of the License, or
+ *     (at your option) any later version.
+ * 
+ *     This program is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU General Public License for more details.
+ * 
+ *     You should have received a copy of the GNU General Public License
+ *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+a.show-popup {
+	z-index: 100;
+    position: fixed;
+	top: 130px;
+    right: 20px;
+    padding: 10px 40px;
+    margin-left: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #FA9932;
+    -webkit-box-shadow: 7px 7px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 7px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 7px 7px 8px 0px rgba(0,0,0,0.75);
+}
+
+a.show-popup:hover {
+    color: #ffffff;
+    background-color: #dd3a10;
+}
+
+#ltm-popup-box-container
+{
+	background:#FFFFFF;
+	border:1px solid #000;
+	padding:0;
+	position:absolute;
+	z-index:999;
+	cursor:default;   
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;   
+	display:none;
+}
+
+#ltm-popup-box-container-header
+{
+	height:30px;
+	background:#4D4D4D;
+	border-top-right-radius:10px;
+	-moz-border-radius-topright:10px;
+	-webkit-border-top-right-radius:10px;
+	-khtml-border-top-right-radius: 10px;
+	border-top-left-radius:10px;
+	-moz-border-radius-topleft:10px;
+	-webkit-border-top-left-radius:10px;
+	-khtml-border-top-left-radius: 10px;
+}
+
+#ltm-popup-box-container-header a
+{
+   color:#FFFFFF;
+   font-family:Verdana,Arial;
+   font-size:10pt;
+   font-weight:bold;
+}
+
+#ltm-popup-box-title
+{
+   float:left;
+   width:180px;
+   margin-left: 5px;
+   color:#FFFFFF;
+   font-family:Verdana,Arial;
+   font-size:15pt;
+   font-weight:bold;  
+}
+
+#ltm-popup-box-close
+{
+   float:right;
+   width:15px;
+   margin:5px;
+}
+
+#ltm-popup-box-container-body
+{
+   margin:15px;
+}
+
+#ltm-popup-box-container-body h2
+{
+   font-family : Arial, sans-serif;
+   font-size: 14pt;
+   font-weight:bold;
+   color:#333;    
+}
+
+#ltm-popup-box-container-body p
+{
+   font-family : Arial, sans-serif;
+   font-size: 12pt;
+   color:#333;
+}
+
+#ltm-popup-box-container-footer
+{
+   position: fixed; 
+   top:0; 
+   left:0; 
+   bottom:0; 
+   right:0;
+   background:#000000;
+   opacity: .3;
+   -moz-opacity: .3;
+   filter: alpha(opacity=30);
+   border:1px solid #cecece;
+   z-index:1;
+   display:none;
+}
+
+#ltm-popup-box-label 
+{
+	font-family : Arial, sans-serif;
+	font-weight: bold;
+	color:#000000;
+	padding-top:4px;
+}
+
+#ltm-popup-box-label-page
+{
+	font-family : Arial, sans-serif;
+	font-weight: bold;
+	color:#000000;
+	padding-top:4px;
+	line-height:0.5em;
+	font-size:14px;
+}
+#ltm-popup-box-alert 
+{
+	font-family : Arial, sans-serif;
+	font-size:1.0em;
+	color:#FF0000;
+	padding-top:4px;
+}
+.ltm-popup-textbox 
+{
+	width:100%;
+	color:#000000;
+}
+.ltm-popup-textarea 
+{
+	width:270px;
+	height:90px;
+	color:#000000;
+}
+
