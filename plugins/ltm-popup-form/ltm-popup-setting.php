@@ -3,7 +3,7 @@
     <div class="form-wrap">
         <div id="icon-plugins" class="icon32 icon32-posts-post"><br>
         </div>
-        <h2><?php _e('LotekMedia Popup Form', 'ltm-popup'); ?></h2>
+        <h2><?php _e('LTM Popup Form', 'ltm-popup'); ?></h2>
         <h3><?php _e('Popup email setting', 'ltm-popup'); ?></h3>
         <form name="ltm-popup-form" method="post" action="options.php">
             <?php settings_fields('ltm_popup_group'); ?>

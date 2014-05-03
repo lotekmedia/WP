@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: LTM contact form\n"
-"POT-Creation-Date: 2014-05-02 22:01-0500\n"
-"PO-Revision-Date: 2014-05-02 22:02-0500\n"
+"POT-Creation-Date: 2014-05-03 18:35-0500\n"
+"PO-Revision-Date: 2014-05-03 18:35-0500\n"
 "Last-Translator: John Mann <me@johnmann.org>\n"
 "Language-Team: johnmann.org <www.johnmann.org>\n"
 "Language: en\n"
@@ -15,24 +15,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../ltm-popup-form.php:47
+#: ../ltm-popup-form.php:62
 msgid "Your Name"
 msgstr ""
 
-#: ../ltm-popup-form.php:51
+#: ../ltm-popup-form.php:68
 msgid "Your Email"
 msgstr ""
 
-#: ../ltm-popup-save.php:41
+#: ../ltm-popup-form.php:153
 msgid "Message sent successfully."
 msgstr ""
 
-#: ../ltm-popup-save.php:46
+#: ../ltm-popup-form.php:157
 msgid "Please enter your name and email."
 msgstr ""
 
+#: ../ltm-popup-form.php:162
+msgid "Unauthorized attempt"
+msgstr ""
+
 #: ../ltm-popup-setting.php:6
-msgid "LotekMedia Popup Form"
+msgid "LTM Popup Form"
 msgstr ""
 
 #: ../ltm-popup-setting.php:7

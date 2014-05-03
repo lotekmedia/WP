@@ -1,6 +1,6 @@
 === LTM Popup Form ===
 Contributors: john mann
-Plugin URI: https://github.com/lotekmedia/WP/tree/master/plugins/ltm-popup-form
+Plugin URI: http://github.com/lotekmedia/WordPress/ltm-popup-form/
 Author URI: http://johnmann.org
 Tags: popup, form
 Requires at least: 3.4
