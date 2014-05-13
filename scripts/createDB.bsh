@@ -20,7 +20,7 @@ fi
 
 cd c:/xampp/htdocs
 mkdir $1.dev
-cp -R 'c:/Users/John/Downloads/wordpress-3.9.1/wordpress/.' c:/xampp/htdocs/$1.dev
+cp -R 'c:/code/source/wordpress-3.9.1/wordpress/.' c:/xampp/htdocs/$1.dev
 
 echo "
 ********** copy this to host file ***************
