@@ -1,0 +1,40 @@
+#!/bin/bash
+  
+EXPECTED_ARGS=2
+E_BADARGS=65
+MYSQL=`which mysql`
+  
+Q1="CREATE DATABASE IF NOT EXISTS $1;"
+Q2="GRANT USAGE ON *.* TO $1@localhost IDENTIFIED BY '$2';"
+Q3="GRANT ALL PRIVILEGES ON $1.* TO $1@localhost;"
+Q4="FLUSH PRIVILEGES;"
+SQL="${Q1}${Q2}${Q3}${Q4}"
+  
+if [ $# -ne $EXPECTED_ARGS ]
+then
+  echo "Usage: $0 dbname dbuser dbpass"
+  exit $E_BADARGS
+fi
+  
+"$MYSQL" -uroot -p -e "$SQL"
+
+cd c:/xampp/htdocs
+mkdir $1.dev
+cp -R 'c:/Users/John/Downloads/wordpress-3.9.1/wordpress/.' c:/xampp/htdocs/$1.dev
+
+echo "
+********** copy this to host file ***************
+127.0.0.1 $1.dev
+*************************************************
+*************** Copy this to vhost **************
+NameVirtualHost $1.dev:80
+
+<VirtualHost $1.dev:80>
+    ServerAdmin postmaster@%siteName%
+    DocumentRoot "C:/xampp/htdocs/$1.dev"
+    ServerName $1.dev
+    ServerAlias www.$1.dev
+    ErrorLog "logs/$1.dev-error.log"
+    CustomLog "logs/$1.dev-access.log" combined
+</VirtualHost>
+*************************************************"
